@@ -1,0 +1,50 @@
+@import "_fonts";
+@import "_mixins";
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: $base-font;
+  font-size: $base-font-size;
+  line-height: 1.2;
+  min-width: 320px;
+  background: #f6f7fb;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: color .3s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+input, textarea {
+  background: none;
+  border: none;
+  appearance: none;
+
+  font-family: $base-font;
+}
+
+button {
+  background: none;
+  border: none;
+  appearance: none;
+
+  font-family: $base-font;
+  &:hover{
+    cursor: pointer;
+  }
+}

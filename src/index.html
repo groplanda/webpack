@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+  <a-scene>
+    <a-assets>
+      <video id="video" preload="auto"
+             src="./videos/video-1.mp4"
+             autoplay loop="true"
+             crossOrigin="anonymous">
+      </video>
+    </a-assets>
+    <a-videosphere
+      rotation="0 -90 0"
+      src="#video"
+      visible="false"
+      play-on-click>
+    </a-videosphere>
+    <a-camera>
+      <a-entity
+        position="0 0 -1.5"
+        text="align: center;
+              width: 6;
+              wrapCount: 100;
+              color: black;
+              value: Click or tap to start video"
+        hide-on-play="#video">
+      </a-entity>
+    </a-camera>
+  </a-scene>
+</body>
+</html>

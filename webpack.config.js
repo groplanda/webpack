@@ -7,6 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
@@ -50,7 +51,8 @@ const plugins = () => {
     }),
     new MiniCssExtractPlugin({
       filename: filename('css')
-    })
+    }),
+    new SVGSpritemapPlugin('./src/icons/*.svg')
   ]
 
   if (isProd) {
